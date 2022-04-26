@@ -348,7 +348,7 @@ MonoBehaviour:
   bodyPrefab: {fileID: 4758030569962901951, guid: 06a7044d318f55a4bb2c6a3a53062789, type: 3}
   moveSpeed: 5
   speed: 15
-  gap: 5
+  gap: 10
   foodTaken: 0
 --- !u!1 &963194225
 GameObject:
@@ -550,8 +550,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Food
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6446157571068597924, guid: bd164ac0d1699e242bd2f901c7a1931f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd164ac0d1699e242bd2f901c7a1931f, type: 3}
 --- !u!1001 &8225908722456453282
 PrefabInstance:
@@ -560,6 +559,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 229613065, guid: 9ceb35fb4df194140821318d3e20a5af, type: 3}
+      propertyPath: m_Name
+      value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 229613065, guid: 9ceb35fb4df194140821318d3e20a5af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 624753384, guid: 9ceb35fb4df194140821318d3e20a5af, type: 3}
+      propertyPath: m_Name
+      value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 624753384, guid: 9ceb35fb4df194140821318d3e20a5af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 727438177, guid: 9ceb35fb4df194140821318d3e20a5af, type: 3}
+      propertyPath: m_Name
+      value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 727438177, guid: 9ceb35fb4df194140821318d3e20a5af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2068711039, guid: 9ceb35fb4df194140821318d3e20a5af, type: 3}
+      propertyPath: m_Name
+      value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 2068711039, guid: 9ceb35fb4df194140821318d3e20a5af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8225908720804327136, guid: 9ceb35fb4df194140821318d3e20a5af, type: 3}
       propertyPath: m_RootOrder
       value: 2

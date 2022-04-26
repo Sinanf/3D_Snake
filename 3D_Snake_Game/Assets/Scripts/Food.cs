@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    private float speed = 30f;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +13,6 @@ public class Food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.one * speed * Time.deltaTime);
+        
     }
 }
