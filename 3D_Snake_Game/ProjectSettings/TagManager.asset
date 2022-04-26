@@ -7,6 +7,7 @@ TagManager:
   - Body
   - Pickup
   - Food
+  - Walls
   layers:
   - Default
   - TransparentFX
