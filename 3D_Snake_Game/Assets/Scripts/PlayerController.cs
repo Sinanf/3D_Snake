@@ -75,34 +75,31 @@ public class PlayerController : MonoBehaviour
             foodTaken = true;
             other.gameObject.SetActive(false);
             Debug.Log("You collected piece");
-            GrowSnake();
-            StartCoroutine(FoodCooldown());
+            GrowSnake();            
             spawnManager.SpawnFood();
         }
 
-        if(other.tag == "Obstacle")
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {      
+
+        if (other.collider.tag == "Obstacle")
         {
             //Game Over
+            Debug.Log("Crashed obstacle");
 
         }
 
-        if (other.tag == "Walls")
+        if (other.collider.tag == "Walls")
         {
             //Game Over
+            Debug.Log("Crashed walls");
 
         }
-
-
-
     }
 
-    // Cooldown
-    IEnumerator FoodCooldown()
-    {
-        yield return new WaitForSeconds(5);
-
-
-    }
+    
 
 
 }
