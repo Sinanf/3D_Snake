@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public SpawnManager spawnManager;
     public ScoreManager scoreManager;
-    private GameManager gameManager1;
+    
 
     public GameObject bodyPrefab;
     public GameObject gameOverUI;
@@ -19,20 +19,13 @@ public class PlayerController : MonoBehaviour
 
 
     public float moveSpeed = 2000f;
-    public float speed = 1000f;
+    public float speed = 2000f;
     public int gap = 5;
 
     public bool isAlive = true;
     public bool foodTaken = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-
-    }
-
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         if (isAlive)
@@ -97,10 +90,6 @@ public class PlayerController : MonoBehaviour
             isAlive = false;
             gameOverUI.SetActive(true);
             
-            
-            
-            
-            
 
         }
 
@@ -108,9 +97,8 @@ public class PlayerController : MonoBehaviour
         {
             isAlive = false;
             gameOverUI.SetActive(true);
-             
             
-            
+
         }
 
 
@@ -121,7 +109,6 @@ public class PlayerController : MonoBehaviour
     IEnumerator FoodCooldown()
     {
         yield return new WaitForSeconds(5);
-
 
     }
 

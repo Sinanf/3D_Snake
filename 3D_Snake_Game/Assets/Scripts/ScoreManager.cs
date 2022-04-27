@@ -10,31 +10,29 @@ public class ScoreManager : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text highScoreText;
 
+    public List<int> scoreList = new List<int>();
+
     int score = 0;
     int highScore;
 
     private void Awake()
     {
-        instance = this;
-        
+        instance = this;     
         
     }
 
-    // Start is called before the first frame update
+    
     void Start()
     {
+        
         highScore = PlayerPrefs.GetInt("highscore");
         scoreText.text = score.ToString() + " Points";
         highScoreText.text = "Highscore: " + highScore.ToString();
+        scoreList.Capacity = 5;
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-    }
+    
 
     public void AddPoint()
     {
@@ -42,16 +40,17 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = score.ToString() + " Points";
         if (highScore < score)
         {
-            
+            scoreList.Add(highScore);
             highScore = score;
             PlayerPrefs.SetInt("highscore", highScore);
             highScoreText.text = "Highscore: " + highScore.ToString();
-            PlayerPrefs.Save();
             
+
             
+            PlayerPrefs.Save();          
 
         }
     }
 
-    
+        
 }

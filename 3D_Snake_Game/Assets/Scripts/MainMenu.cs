@@ -69,4 +69,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(10);
     }
+
+    public void HighscoreMenu()
+    {
+        SceneManager.LoadScene(11);
+    }
 }

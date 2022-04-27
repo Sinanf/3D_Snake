@@ -12,13 +12,7 @@ public class SpawnManager : MonoBehaviour
     private float spawnRange = 9;
     public int foodCount;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         foodCount = FindObjectsOfType<Food>().Length;

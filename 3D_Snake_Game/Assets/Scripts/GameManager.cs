@@ -12,20 +12,6 @@ public class GameManager : MonoBehaviour
     public ScoreManager scoreManager;
     
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
-    
-
     public void Resume()
     {
         Time.timeScale = 1f;
@@ -54,14 +40,10 @@ public class GameManager : MonoBehaviour
         gameHasEnded = true;
 
             if (gameHasEnded == true)
-            {
-                
+            {                
                 playerController.gameOverUI.SetActive(true);
-                Time.timeScale = 0f;
-                
+                Time.timeScale = 0f;                
             }
-
-       
 
     }
 
