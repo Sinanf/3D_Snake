@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public SpawnManager spawnManager;
     public ScoreManager scoreManager;
+    private GameManager gameManager1;
 
     public GameObject bodyPrefab;
     public GameObject gameOverUI;
@@ -17,8 +18,8 @@ public class PlayerController : MonoBehaviour
     private List<Vector3> positionsHistory = new List<Vector3>();
 
 
-    public float moveSpeed = 5f;
-    public float speed = 15;
+    public float moveSpeed = 20f;
+    public float speed = 50;
     public int gap = 5;
 
     public bool isAlive = true;
@@ -85,7 +86,6 @@ public class PlayerController : MonoBehaviour
         {
             foodTaken = true;
             other.gameObject.SetActive(false);
-            Debug.Log("You collected piece");
             ScoreManager.instance.AddPoint();
             GrowSnake();
             StartCoroutine(FoodCooldown());
@@ -95,8 +95,11 @@ public class PlayerController : MonoBehaviour
         if(other.tag == "Obstacle")
         {
             isAlive = false;
-            // game over menu
             gameOverUI.SetActive(true);
+            
+            
+            
+            
             
 
         }
@@ -104,8 +107,10 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Walls")
         {
             isAlive = false;
-            //game over menu 
             gameOverUI.SetActive(true);
+             
+            
+            
         }
 
 

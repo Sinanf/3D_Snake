@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public bool gameHasEnded = false;
 
     public PlayerController playerController;
+    public ScoreManager scoreManager;
     
 
     // Start is called before the first frame update
@@ -50,14 +51,18 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-       
-            if (playerController.isAlive == false)
+        gameHasEnded = true;
+
+            if (gameHasEnded == true)
             {
-                gameHasEnded = true;
+                
                 playerController.gameOverUI.SetActive(true);
                 Time.timeScale = 0f;
+                
             }
-                    
+
+       
+
     }
 
 
