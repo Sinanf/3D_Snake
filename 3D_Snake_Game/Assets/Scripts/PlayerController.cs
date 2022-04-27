@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour
     private List<Vector3> positionsHistory = new List<Vector3>();
 
 
-    public float moveSpeed = 20f;
-    public float speed = 50;
+    public float moveSpeed = 2000f;
+    public float speed = 1000f;
     public int gap = 5;
 
     public bool isAlive = true;
