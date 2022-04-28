@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
 
     public float moveSpeed = 2000f;
-    public float speed = 2000f;
+    public float speed = 1000f;
     public int gap = 5;
 
     public bool isAlive = true;
